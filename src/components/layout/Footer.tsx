@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Camera, Globe } from 'lucide-react'
+import { Globe } from 'lucide-react'
 
 export const Footer = () => {
   return (

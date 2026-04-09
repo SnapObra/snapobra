@@ -234,7 +234,7 @@ export const useReportStore = create<ReportState>((set, get) => ({
 
       // 1. Processar Foto (Converter para WebP + Compressão)
       const webpBlob = await processImage(file);
-      const storagePath = generateStoragePath(user.id, obraId, file.name);
+      const storagePath = generateStoragePath(user.id, obraId);
 
       // 2. Upload para o projeto snapobra_store (bucket: fotos-obras)
       const { error: uploadError } = await storageClient

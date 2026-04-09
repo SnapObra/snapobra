@@ -216,7 +216,7 @@ export const useVistoriaStore = create<VistoriaState>((set, get) => ({
       if (!user) throw new Error("Não autenticado");
 
       const webpBlob = await processImage(file);
-      const storagePath = generateStoragePath(user.id, vtNumber, file.name, 'vistorias');
+      const storagePath = generateStoragePath(user.id, vtNumber, 'vistorias');
 
       const { error: uploadError } = await storageClient.storage
         .from('vistorias')

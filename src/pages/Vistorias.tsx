@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Plus, ArrowLeft, Search, Loader2, Calendar, ClipboardCheck, ChevronRight, ImageIcon, FileDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Plus, Search, Loader2, Calendar, ClipboardCheck, ChevronRight, ImageIcon, FileDown } from 'lucide-react';
 import { VistoriaModal } from '../components/features/VistoriaModal';
 import { Vistoria, useVistoriaStore } from '../store/vistoriaStore';
 import { useObraStore } from '../store/obraStore';

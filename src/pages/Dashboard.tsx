@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Plus, Users, ClipboardCheck, ArrowRight, Building2, Bell, Loader2 } from 'lucide-react';
+import { ClipboardCheck, ArrowRight, Building2, Loader2 } from 'lucide-react';
 import { ObraModal } from '../components/features/ObraModal';
 import { useObraStore } from '../store/obraStore';
 import { useReportStore } from '../store/reportStore';

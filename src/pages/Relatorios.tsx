@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Plus, ArrowLeft, Search, Loader2, Building2, Calendar, FileText, ImageIcon, ChevronRight } from 'lucide-react';
+import { Plus, ArrowLeft, Search, Calendar, FileText, ImageIcon, ChevronRight } from 'lucide-react';
 import { ReportModal } from '../components/features/ReportModal';
 import { Relatorio, useReportStore } from '../store/reportStore';
 import { useObraStore } from '../store/obraStore';

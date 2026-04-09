@@ -70,7 +70,7 @@ export const processImage = async (
  * Gera um nome de arquivo único e amigável para o storage organizado por usuário.
  * Para vistorias, o identifier é o número do laudo (VTXXX).
  */
-export const generateStoragePath = (userId: string, identifier: string, fileName: string, type: 'obras' | 'vistorias' = 'obras'): string => {
+export const generateStoragePath = (userId: string, identifier: string, type: 'obras' | 'vistorias' = 'obras'): string => {
   const timestamp = new Date().getTime();
   const randomString = Math.random().toString(36).substring(2, 8);
   // Usando .jpg para máxima compatibilidade com geradores de PDF e mobile

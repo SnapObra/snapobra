@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Save, Upload, Building2, User as UserIcon, Loader2, MapPin, Phone, Mail, Award, Palette, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Save, Upload, Building2, User as UserIcon, Loader2, MapPin, Phone, Mail, Award, Palette, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useProfileStore } from '../store/profileStore';
 import { storageClient } from '../lib/supabase';

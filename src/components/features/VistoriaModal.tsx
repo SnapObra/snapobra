@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { X, Save, Plus, Trash2, Camera, Loader2, ClipboardCheck, Layout, ListChecks, ImageIcon, FileCheck, CheckCircle2, AlertCircle, AlertTriangle, FileDown, ChevronRight, User } from 'lucide-react';
+import { X, Save, Trash2, Camera, Loader2, ClipboardCheck, Layout, ListChecks, ImageIcon, FileCheck, CheckCircle2, AlertCircle, AlertTriangle, FileDown, ChevronRight, User } from 'lucide-react';
 import { useVistoriaStore, Vistoria, VistoriaFoto } from '../../store/vistoriaStore';
 import { generateVistoriaPDF } from '../../services/pdf/vistoriaPdfService';
 import { motion, AnimatePresence } from 'framer-motion';

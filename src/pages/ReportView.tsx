@@ -9,7 +9,6 @@ import { useReportStore, Foto } from '../store/reportStore';
 import { useObraStore } from '../store/obraStore';
 import { useProfileStore } from '../store/profileStore';
 import { format } from 'date-fns';
-import { ptBR } from 'date-fns/locale';
 import { downloadPremiumPDF } from '../services/pdf/pdfGeneratorService';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import { shortenUrl } from '../lib/urlShortener';

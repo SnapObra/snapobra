@@ -16,7 +16,7 @@ export const ObraModal = ({ isOpen, onClose, obra }: ObraModalProps) => {
   const [cepLoading, setCepLoading] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
-  const { register, handleSubmit, setValue, reset, formState: { errors } } = useForm({
+  const { register, handleSubmit, setValue, reset } = useForm({
     defaultValues: {
       name: '',
       client_name: '',
