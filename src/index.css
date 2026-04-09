@@ -1,0 +1,174 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+@theme {
+  --font-display: "Poppins", "sans-serif";
+  --font-body: "Lato", "sans-serif";
+  --color-brand-primary: #4318FF;
+  --color-brand-dark: #1B2559;
+  --color-brand-amber: #FFBF00;
+}
+
+/* 
+  CONSERTO NUCLEAR PARA HTML2CANVAS (TAILWIND 4 + OKLCH)
+  Redefinição das cores do sistema para HEXadecimal puro 
+*/
+:root {
+  --color-slate-50: #F8FAFC !important;
+  --color-slate-100: #F1F5F9 !important;
+  --color-slate-200: #E2E8F0 !important;
+  --color-slate-300: #CBD5E1 !important;
+  --color-slate-400: #94A3B8 !important;
+  --color-slate-500: #64748B !important;
+  --color-slate-600: #475569 !important;
+  --color-slate-700: #334155 !important;
+  --color-slate-800: #1E293B !important;
+  --color-slate-900: #0F172A !important;
+  
+  --color-brand-soft-bg: #F4F7FE !important;
+  --color-brand-soft-white: #FFFFFF !important;
+  --color-brand-soft-shadow: rgba(112, 144, 176, 0.12) !important;
+  
+  --color-emerald-400: #34D399 !important;
+  --color-emerald-500: #10B981 !important;
+  --color-emerald-600: #059669 !important;
+
+  --color-red-50: #FEF2F2 !important;
+  --color-red-100: #FEE2E2 !important;
+  --color-red-500: #EF4444 !important;
+}
+
+@layer base {
+  body {
+    background-color: #F4F7FE; /* SnapSoft UI Surface */
+    color: #0F172A; /* slate-900 */
+    font-family: "Lato", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+    letter-spacing: -0.025em;
+    color: #1B2559; /* Profundo e suave */
+  }
+
+  /* Garantia para SVGs e Lucide Icons */
+  svg {
+    color: inherit;
+    fill: none;
+    stroke: currentColor;
+  }
+}
+
+@layer components {
+  /* Utilitários SnapSoft UI */
+  .soft-card {
+    background-color: #FFFFFF;
+    border-radius: 2rem;
+    box-shadow: 14px 17px 40px 4px rgba(112, 144, 176, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .soft-glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+  }
+
+  /* Utilitários de Design Compacto (Manutenção por Requisito) */
+  .input-compact {
+    height: 32px;
+    font-size: 11px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    background-color: #F4F7FE;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.75rem;
+    outline: none;
+    transition: all 0.2s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-compact {
+    height: 32px;
+    font-size: 11px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 0.75rem;
+    transition: all 0.2s;
+  }
+
+  .label-compact {
+    font-size: 9px;
+    font-weight: 700;
+    color: #64748B; /* slate-500 */
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+
+  .btn-primary {
+    background-color: #4318FF; /* Novo primary azul vibrante suave */
+    color: #ffffff;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 4px 14px rgba(67, 24, 255, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 20px rgba(67, 24, 255, 0.4);
+    background-color: #3311DB;
+  }
+
+  .btn-secondary {
+    background-color: #ffffff;
+    border: 1px solid #E9EDF7;
+    color: #1B2559;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out forwards;
+}
+
+/* Compatibilidade html2canvas: reset de ring-shadow */
+@media print, screen {
+  * {
+    --tw-ring-shadow: 0 0 transparent !important;
+  }
+}
